@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/turnage/graw/reddit"
+	"github.com/brrm/graw/reddit"
 )
 
 type mockMonitor struct {

@@ -3,7 +3,7 @@
 package botfaces
 
 import (
-	"github.com/turnage/graw/reddit"
+	"github.com/brrm/graw/reddit"
 )
 
 // Loader defines methods for bots that use external resources or need to do

@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/turnage/graw/reddit"
+	"github.com/brrm/graw/reddit"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 

@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/turnage/graw/reddit"
+	"github.com/turnage/brrm/reddit"
 )
 
 type mockScanner struct{}
