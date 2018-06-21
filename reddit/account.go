@@ -1,5 +1,7 @@
 package reddit
 
+import "fmt"
+
 // Account defines behaviors only an account can perform on Reddit.
 type Account interface {
 	// Reply posts a reply to something on reddit. The behavior depends on
@@ -21,6 +23,8 @@ type Account interface {
 
 	// PostLink makes a link post to a subreddit.
 	PostLink(subreddit, title, url string) error
+
+	Delete(name string) error
 }
 
 type account struct {
@@ -73,6 +77,15 @@ func (a *account) PostLink(subreddit, title, url string) error {
 			"kind":  "link",
 			"title": title,
 			"url":   url,
+		},
+	)
+}
+
+func (a *account) Delete(name string) error {
+	fmt.Println("delete ran")
+	return a.r.sow(
+		"/api/del", map[string]string{
+			"id": name,
 		},
 	)
 }
