@@ -1,7 +1,5 @@
 package reddit
 
-import "fmt"
-
 // Account defines behaviors only an account can perform on Reddit.
 type Account interface {
 	// Reply posts a reply to something on reddit. The behavior depends on
@@ -82,7 +80,6 @@ func (a *account) PostLink(subreddit, title, url string) error {
 }
 
 func (a *account) Delete(name string) error {
-	fmt.Println("delete ran")
 	return a.r.sow(
 		"/api/del", map[string]string{
 			"id": name,
